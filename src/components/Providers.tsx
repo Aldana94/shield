@@ -2,9 +2,8 @@
 
 import { Auth0Provider } from '@auth0/auth0-react';
 import { EnvironmentProvider } from '@/contexts/EnvironmentContext';
-import MainLayout from '@/components/layout/MainLayout';
 
-export default function RootPage() {
+export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <Auth0Provider
       domain="xandar-odin.auth0.com"
@@ -14,14 +13,7 @@ export default function RootPage() {
       }}
     >
       <EnvironmentProvider>
-        <MainLayout>
-          <div className="bg-white rounded-lg shadow p-6">
-            <h2 className="text-2xl font-bold mb-4">Welcome to Shield</h2>
-            <p className="text-gray-600">
-              Select a service from the sidebar to manage your scripts.
-            </p>
-          </div>
-        </MainLayout>
+        {children}
       </EnvironmentProvider>
     </Auth0Provider>
   );
