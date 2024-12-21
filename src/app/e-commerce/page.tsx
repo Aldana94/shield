@@ -1,8 +1,10 @@
-import MainLayout from '@/components/layout/MainLayout';
+'use client';
+
+import PageWrapper from '@/components/PageWrapper';
 
 export default function ECommerce() {
   return (
-    <MainLayout>
+    <PageWrapper>
       <div className="space-y-6">
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-2xl font-bold mb-4">E-Commerce Scripts</h2>
@@ -20,6 +22,6 @@ export default function ECommerce() {
           </div>
         </div>
       </div>
-    </MainLayout>
+    </PageWrapper>
   );
 }

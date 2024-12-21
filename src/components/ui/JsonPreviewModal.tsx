@@ -10,7 +10,7 @@ interface JsonPreviewModalProps {
   jsonData: any;
 }
 
-const JsonPreviewModal = ({ isOpen, onClose, onConfirm, jsonData }: JsonPreviewModalProps) => {
+export function JsonPreviewModal({ isOpen, onClose, onConfirm, jsonData }: JsonPreviewModalProps) {
   if (!isOpen) return null;
 
   return (
@@ -49,6 +49,4 @@ const JsonPreviewModal = ({ isOpen, onClose, onConfirm, jsonData }: JsonPreviewM
       </div>
     </div>
   );
-};
-
-export default JsonPreviewModal;
+}
